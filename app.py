@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
 base_path = './InsuranceLM'
-os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/internlm2-chat-7b.git {base_path}')
+os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/internlm2-chat-1_8b.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
@@ -16,7 +16,7 @@ def chat(message,history):
         yield response
 
 gr.ChatInterface(chat,
-                 title="InternLM2-Chat-7B",
+                 title="InternLM2-Chat-1.8B",
                 description="""
 InternLM is mainly developed by Shanghai AI Laboratory.  
                  """,
