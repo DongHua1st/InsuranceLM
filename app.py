@@ -21,6 +21,6 @@ def chat(message,history):
 gr.ChatInterface(chat,
                  title="InternLM2-Chat-1.8B",
                 description="""
-InternLM is mainly developed by Shanghai AI Laboratory.  
+InsuranceLM is a model that can help answer questions on insurances.  
                  """,
                  ).queue(1).launch()
