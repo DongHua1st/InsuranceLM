@@ -5,7 +5,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 from openxlab.model import download
 
 base_path = './InsuranceLM'
-os.system(f'git clone https://code.openxlab.org.cn/AntiSalt/InsuranceLM.git {base_path}')
+os.system('apt install git')
+os.system('apt install git-lfs')
+# please replace "your_git_token" with real token
+os.system(f'git clone https://AntiSalt:dc991545bd84e9e6f6089f9a03c5a5ea6810d313@code.openxlab.org.cn/AntiSalt/InsuranceLM.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
